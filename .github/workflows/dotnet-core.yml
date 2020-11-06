@@ -22,4 +22,4 @@ jobs:
     - name: Build
       run: dotnet build ./XliffCheck/XliffCheck.sln --configuration Release --no-restore
     - name: Publish
-      run: dotnet publish
+      run: dotnet publish ./XliffCheck/XliffCheck.sln 
