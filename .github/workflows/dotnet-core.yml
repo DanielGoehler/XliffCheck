@@ -2,7 +2,7 @@ name: .NET Core
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, DanielGoehler-patch-1 ]
   pull_request:
     branches: [ main ]
 
@@ -21,3 +21,5 @@ jobs:
       run: dotnet restore ./XliffCheck/XliffCheck.sln
     - name: Build
       run: dotnet build ./XliffCheck/XliffCheck.sln --configuration Release --no-restore
+    - name: Publish
+      run: dotnet publish
